@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head lang="en">
+  <head>
     <meta charset="utf-8" />
-    <title>Belajar React</title>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Belajar Reactjs</title>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
   </head>
+
+  <style>
+    .header {
+      background-color: blueviolet;
+      color: white;
+      padding: 10px;
+      font-family: Lato, sans-serif;
+    }
+  </style>
+
   <body>
-    <div id="root"></div>
+    <div id="app"></div>
 
     <script type="text/babel">
-      const container = document.getElementById("root");
-      const root = ReactDOM.createRoot(container);
-      root.render(<h1>Belajar React Hari Pertama 🚀</h1>);
+      // membuat elemen JSX
+      let header = (
+        <header className="header">
+          <h2>Belajar menggunakan JSX pada React</h2>
+          <p>Tutorial ReactJs untuk pemula</p>
+        </header>
+      );
+
+      // render elemen ke DOM
+      ReactDOM.render(header, document.getElementById("app"));
     </script>
   </body>
 </html>
